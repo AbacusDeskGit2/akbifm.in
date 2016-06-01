@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Application Form</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<style type="text/css"> <!-- .style1 { font-family: Arial, Helvetica, sans-serif; font-size: 9px; }
+	--></style>
+		<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+        </script>
+	</head>
+	<body>
+	<script language="javascript">
+		<!--
+function checkForm()
+{
+   var ccourse, cname, cphone;
+   with(window.document.msgform)
+   {
+      ccourse = courseapplied;
+	  cname    = sname;
+	  cphone = phone;
+           
+   }
+
+   if(trim(ccourse.value) == '')
+   {
+      alert('Please enter the course');
+      ccourse.focus();
+      return false;
+   }
+ if(trim(cname.value) == '')
+   {
+      alert('Please enter your name');
+      cname.focus();
+      return false;
+   }
+ if(trim(cphone.value) == '')
+   {
+      alert('Please enter your phone no.');
+      cphone.focus();
+      return false;
+   }
+ 
+   else
+   {
+      cname.value    = trim(cname.value);
+	  ccourse.value = trim(ccourse.value);
+	  cphone.value = trim(cphone.value);
+    
+	        return true;
+   }
+}
+
+/*
+Strip whitespace from the beginning and end of a string
+Input : a string
+*/
+function trim(str)
+{
+   return str.replace(/^\s+|\s+$/g,'');
+}
+
+/*
+Check if a string is in valid email format. 
+Returns true if valid, false otherwise.
+*/
+
+//-->
+</script>
+		<form action="contactmail.html" method="post" name="form1" id="form1" onSubmit="MM_validateForm('courseapplied','','R','sname','','R','pin','','NisNum','phone','','RisNum','marks1','','NisNum','marks2','','NisNum','marks3','','NisNum','marks4','','NisNum');return document.MM_returnValue">
+	      <table width="80%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#888888" bgcolor="#DDDDDD">
+            <tr>
+              <td width="27%" height="39">Course Applied for * </td>
+              <td colspan="3"><input name="courseapplied" type="text" size="30"></td>
+            </tr>
+            <tr>
+              <td height="31">Mr./Mrs./Miss * </td>
+              <td colspan="3"><input name="sname" type="text" size="30"></td>
+            </tr>
+            <tr>
+              <td height="33">Son/Daughter of </td>
+              <td colspan="3"><input name="relation" type="text" size="30"></td>
+            </tr>
+            <tr>
+              <td height="31">Address for Communication </td>
+              <td colspan="3"><input name="address" type="text" size="30"></td>
+            </tr>
+            <tr>
+              <td height="31">Pin</td>
+              <td colspan="3"><input name="pin" type="text" size="30"></td>
+            </tr>
+            <tr>
+              <td height="34">Phone * </td>
+              <td colspan="3"><input name="phone" type="text" size="30">
+              </td>
+            </tr>
+            <tr>
+              <td height="31">Date of Birth </td>
+              <td colspan="3"><input name="dob" type="text" size="30">
+              (DD/MM/YYYY)</td>
+            </tr>
+            <tr>
+              <td height="41" colspan="4"><strong>Education Data (Academic &amp; Professional) </strong> </td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="29"><div align="center">Qualification</div></td>
+              <td width="18%"><div align="left">Year of Passing </div></td>
+              <td width="38%"><div align="center">University/Institute/College</div></td>
+              <td width="17%"><div align="center">% of Marks </div></td>
+            </tr>
+            <tr>
+              <td><div align="center">
+                  <input type="text" name="qualification1">
+              </div></td>
+              <td>
+                <div align="left">
+                  <input type="text" name="yearpassing1">
+              </div></td>
+              <td><div align="center">
+                  <input name="university1" type="text" size="50">
+              </div></td>
+              <td><div align="center">
+                  <input name="marks1" type="text" size="12">
+              </div></td>
+            </tr>
+            <tr>
+              <td><div align="center">
+                  <input type="text" name="qualification2">
+              </div></td>
+              <td>
+                <div align="left">
+                  <input type="text" name="yearpassing2">
+              </div></td>
+              <td><div align="center">
+                  <input name="university2" type="text" size="50">
+              </div></td>
+              <td><div align="center">
+                  <input name="marks2" type="text" size="12">
+              </div></td>
+            </tr>
+            <tr>
+              <td><div align="center">
+                  <input type="text" name="qualification3">
+              </div></td>
+              <td><input type="text" name="yearpassing3"></td>
+              <td><div align="center">
+                  <input name="university3" type="text" size="50">
+              </div></td>
+              <td><div align="center">
+                  <input name="marks3" type="text" size="12">
+              </div></td>
+            </tr>
+            <tr>
+              <td><div align="center">
+                  <input type="text" name="qualification4">
+              </div></td>
+              <td><input type="text" name="yearpassing4"></td>
+              <td><div align="center">
+                  <input name="university4" type="text" size="50">
+              </div></td>
+              <td><div align="center">
+                  <input name="marks4" type="text" size="12">
+              </div></td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="36">Whether Employed </td>
+              <td> Y es
+                  <input name="employed" type="radio" value="Employed"></td>
+              <td colspan="2">No
+                  <input name="employed" type="radio" value="Not Employed"></td>
+            </tr>
+            <tr>
+              <td height="31">Batch Time </td>
+              <td colspan="3"><input name="batchtime" type="text" size="23"></td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="29" colspan="4">If yes, please mention company Name &amp; Address
+                  <input name="companyname" type="text" size="90"></td>
+            </tr>
+            <tr>
+              <td height="32" colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Payment Details : </td>
+              <td colspan="3"><input name="paymentdetails" type="text" size="70"></td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="4">I have read the conditions applicable to the course as prescribed in the prospectus along with terms and conditions on application form shall abide by the same. I have clearly understood that the fee once paid is neither nor adjustable to any other person or course under any circumstances. </td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+              <td height="33">Date</td>
+              <td colspan="3"><input type="text" name="dated"></td>
+            </tr>
+            <tr>
+              <td>Place</td>
+              <td colspan="3"><input type="text" name="place"></td>
+            </tr>
+            <tr>
+              <td colspan="4">&nbsp;</td>
+            </tr>
+            <tr align="right">
+              <td colspan="4">&nbsp;
+                  <INPUT id="Button1" type="submit" value="SUBMIT" name="Button1" onClick="return checkForm();"></td>
+            </tr>
+          </table>
+	</form>
+	</body>
+</html>

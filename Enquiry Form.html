@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function MM_validateForm() { //v4.0
+  if (document.getElementById){
+    var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+    for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
+      if (val) { nm=val.name; if ((val=val.value)!="") {
+        if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+        } else if (test!='R') { num = parseFloat(val);
+          if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+          if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+            min=test.substring(8,p); max=test.substring(p+1);
+            if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+      } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+    } if (errors) alert('The following error(s) occurred:\n'+errors);
+    document.MM_returnValue = (errors == '');
+} }
+</script>
+</head>
+
+<body>
+<form action="mailed.php" method="post" name="enquiry" id="enquiry" onsubmit="MM_validateForm('Name','','R','City','','R','State','','R','Phone','','R','email','','R','Description-of-the-Requirement','','R');return document.MM_returnValue" >
+                              <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+                                
+                                <tr>
+                                  <td align="left" valign="top" bgcolor="#99CCFF"><table width="520" border="0" align="center" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td height="35" bgcolor="#99CCFF" class="packers"><div align="center"><strong><font size="4" face="Verdana, Arial, Helvetica, sans-serif">Online 
+                                          Enquiry Form</font></strong></div></td>
+                                      </tr>
+                                    </table>
+                                      <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px">
+                                        <tr>
+                                          <td width="206" height="19"><div align="right" >Name</div></td>
+                                          <td width="16" class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="Name" type="text" class="packers" size="25" id="Name" />
+                                              <span class="packers5">*</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div align="right" class="packers">Designation</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="Designation" type="text" size="25" class="packers" id="Designation" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div align="right" class="packers">Organization</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="Organization" type="text" class="packers"  size="25" id="Organization" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div align="right" class="packers">City</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="City" type="text" size="25" class="packers" id="City" />
+                                              <span class="packers5">*</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div align="right" class="packers">State</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="State" type="text" class="packers" size="25" id="State" />
+                                              <span class="packers5">*</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">Country</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif">
+                                            <select name="Country" class="packers" id="Country" >
+                                              <option value="" selected="selected"> Select Your Country</option>
+                                              <option value="AFGHANISTAN">AFGHANISTAN</option>
+                                              <option value="ALBANIA">ALBANIA</option>
+                                              <option value="ALGERIA">ALGERIA</option>
+                                              <option value="AMERICAN SAMOA">AMERICAN SAMOA</option>
+                                              <option value="ANDORRA">ANDORRA</option>
+                                              <option value="ANGOLA">ANGOLA</option>
+                                              <option value="ANGUILLA">ANGUILLA</option>
+                                              <option value="ANTIGUA AND BARBUDA">ANTIGUA AND BARBUDA</option>
+                                              <option value="ARGENTINA">ARGENTINA</option>
+                                              <option value="ARMENIA">ARMENIA</option>
+                                              <option value="ARUBA">ARUBA</option>
+                                              <option value="ASCENSION ISLAND">ASCENSION ISLAND</option>
+                                              <option value="AUSTRALIA">AUSTRALIA</option>
+                                              <option value="AUSTRIA">AUSTRIA</option>
+                                              <option value="AZERBAIDJAN">AZERBAIDJAN</option>
+                                              <option value="BAHAMAS">BAHAMAS</option>
+                                              <option value="BAHRAIN">BAHRAIN</option>
+                                              <option value="BANGLADESH">BANGLADESH</option>
+                                              <option value="BARBADOS">BARBADOS</option>
+                                              <option value="BELARUS">BELARUS</option>
+                                              <option value="BELGIUM">BELGIUM</option>
+                                              <option value="BELIZE">BELIZE</option>
+                                              <option value="BENIN">BENIN</option>
+                                              <option value="BERMUDA">BERMUDA</option>
+                                              <option value="BHUTAN">BHUTAN</option>
+                                              <option value="BOLIVIA">BOLIVIA</option>
+                                              <option value="BOSNIA-HERZEGOVINA">BOSNIA-HERZEGOVINA</option>
+                                              <option value="BOTSWANA">BOTSWANA</option>
+                                              <option value="BOUVET ISLAND">BOUVET ISLAND</option>
+                                              <option value="BRAZIL">BRAZIL</option>
+                                              <option value="BRUNEI DARUSSALAM">BRUNEI DARUSSALAM</option>
+                                              <option value="BULGARIA">BULGARIA</option>
+                                              <option value="BURKINA FASO">BURKINA FASO</option>
+                                              <option value="BURUNDI">BURUNDI</option>
+                                              <option value="CAMBODIA">CAMBODIA</option>
+                                              <option value="CAMEROON">CAMEROON</option>
+                                              <option value="CANADA">CANADA</option>
+                                              <option value="CAPE VERDE">CAPE VERDE</option>
+                                              <option value="CAYMAN ISLANDS">CAYMAN ISLANDS</option>
+                                              <option value="CENTRAL AFRICAN REPUBLIC">CENTRAL AFRICAN REPUBLIC</option>
+                                              <option value="CHAD">CHAD</option>
+                                              <option value="CHILE">CHILE</option>
+                                              <option value="CHINA">CHINA</option>
+                                              <option value="CHRISTMAS ISLAND">CHRISTMAS ISLAND</option>
+                                              <option value="COCOS (KEELING) ISLANDS">COCOS (KEELING) ISLANDS</option>
+                                              <option value="COLOMBIA">COLOMBIA</option>
+                                              <option value="COMOROS">COMOROS</option>
+                                              <option value="CONGO">CONGO</option>
+                                              <option value="CONGO (DEM. REPUBLIC)">CONGO (DEM. REPUBLIC)</option>
+                                              <option value="COOK ISLANDS">COOK ISLANDS</option>
+                                              <option value="COSTA RICA">COSTA RICA</option>
+                                              <option value="CROATIA">CROATIA</option>
+                                              <option value="CUBA">CUBA</option>
+                                              <option value="CYPRUS">CYPRUS</option>
+                                              <option value="CZECH REPUBLIC">CZECH REPUBLIC</option>
+                                              <option value="DENMARK">DENMARK</option>
+                                              <option value="DJIBOUTI">DJIBOUTI</option>
+                                              <option value="DOMINICA">DOMINICA</option>
+                                              <option value="DOMINICAN REPUBLIC">DOMINICAN REPUBLIC</option>
+                                              <option value="EAST TIMOR">EAST TIMOR</option>
+                                              <option value="ECUADOR">ECUADOR</option>
+                                              <option value="EGYPT">EGYPT</option>
+                                              <option value="EL SALVADOR">EL SALVADOR</option>
+                                              <option value="EQUATORIAL GUINEA">EQUATORIAL GUINEA</option>
+                                              <option value="ERITREA">ERITREA</option>
+                                              <option value="ESTONIA">ESTONIA</option>
+                                              <option value="ETHIOPIA">ETHIOPIA</option>
+                                              <option value="FALKLAND ISLANDS">FALKLAND ISLANDS</option>
+                                              <option value="FAROE ISLANDS">FAROE ISLANDS</option>
+                                              <option value="FIJI">FIJI</option>
+                                              <option value="FINLAND">FINLAND</option>
+                                              <option value="FRANCE">FRANCE</option>
+                                              <option value="FRENCH GUYANA">FRENCH GUYANA</option>
+                                              <option value="GABON">GABON</option>
+                                              <option value="GAMBIA">GAMBIA</option>
+                                              <option value="GEORGIA">GEORGIA</option>
+                                              <option value="GERMANY">GERMANY</option>
+                                              <option value="GHANA">GHANA</option>
+                                              <option value="GIBRALTAR">GIBRALTAR</option>
+                                              <option value="GREECE">GREECE</option>
+                                              <option value="GREENLAND">GREENLAND</option>
+                                              <option value="GRENADA">GRENADA</option>
+                                              <option value="GUADELOUPE (FRENCH)">GUADELOUPE (FRENCH)</option>
+                                              <option value="GUAM">GUAM</option>
+                                              <option value="GUATEMALA">GUATEMALA</option>
+                                              <option value="GUERNSEY">GUERNSEY</option>
+                                              <option value="GUINEA">GUINEA</option>
+                                              <option value="GUINEA BISSAU">GUINEA BISSAU</option>
+                                              <option value="GUYANA">GUYANA</option>
+                                              <option value="HAITI">HAITI</option>
+                                              <option value="HEARD ISLANDS">HEARD ISLANDS</option>
+                                              <option value="HONDURAS">HONDURAS</option>
+                                              <option value="HONG KONG">HONG KONG</option>
+                                              <option value="HUNGARY">HUNGARY</option>
+                                              <option value="ICELAND">ICELAND</option>
+                                              <option value="INDIA">INDIA</option>
+                                              <option value="INDONESIA">INDONESIA</option>
+                                              <option value="IRAN">IRAN</option>
+                                              <option value="IRAQ">IRAQ</option>
+                                              <option value="IRELAND">IRELAND</option>
+                                              <option value="ISRAEL">ISRAEL</option>
+                                              <option value="ITALY">ITALY</option>
+                                              <option value="IVORY COAST">IVORY COAST</option>
+                                              <option value="JAMAICA">JAMAICA</option>
+                                              <option value="JAPAN">JAPAN</option>
+                                              <option value="JORDAN">JORDAN</option>
+                                              <option value="KAZAKHSTAN">KAZAKHSTAN</option>
+                                              <option value="KENYA">KENYA</option>
+                                              <option value="KIRIBATI">KIRIBATI</option>
+                                              <option value="KUWAIT">KUWAIT</option>
+                                              <option value="KYRGYZSTAN">KYRGYZSTAN</option>
+                                              <option value="LAOS">LAOS</option>
+                                              <option value="LATVIA">LATVIA</option>
+                                              <option value="LEBANON">LEBANON</option>
+                                              <option value="LESOTHO">LESOTHO</option>
+                                              <option value="LIBERIA">LIBERIA</option>
+                                              <option value="LIBYA">LIBYA</option>
+                                              <option value="LIECHTENSTEIN">LIECHTENSTEIN</option>
+                                              <option value="LITHUANIA">LITHUANIA</option>
+                                              <option value="LUXEMBOURG">LUXEMBOURG</option>
+                                              <option value="MACAU">MACAU</option>
+                                              <option value="MACEDONIA">MACEDONIA</option>
+                                              <option value="MADAGASCAR">MADAGASCAR</option>
+                                              <option value="MALAWI">MALAWI</option>
+                                              <option value="MALAYSIA">MALAYSIA</option>
+                                              <option value="MALDIVES">MALDIVES</option>
+                                              <option value="MALI">MALI</option>
+                                              <option value="MALTA">MALTA</option>
+                                              <option value="MARSHALL ISLANDS">MARSHALL ISLANDS</option>
+                                              <option value="MARTINIQUE (FRENCH)">MARTINIQUE (FRENCH)</option>
+                                              <option value="MAURITANIA">MAURITANIA</option>
+                                              <option value="MAURITIUS">MAURITIUS</option>
+                                              <option value="MAYOTTE">MAYOTTE</option>
+                                              <option value="MEXICO">MEXICO</option>
+                                              <option value="MICRONESIA">MICRONESIA</option>
+                                              <option value="MOLDOVA">MOLDOVA</option>
+                                              <option value="MONACO">MONACO</option>
+                                              <option value="MONGOLIA">MONGOLIA</option>
+                                              <option value="MONTSERRAT">MONTSERRAT</option>
+                                              <option value="MOROCCO">MOROCCO</option>
+                                              <option value="MOZAMBIQUE">MOZAMBIQUE</option>
+                                              <option value="MYANMAR">MYANMAR</option>
+                                              <option value="NAMIBIA">NAMIBIA</option>
+                                              <option value="NAURU">NAURU</option>
+                                              <option value="NEPAL">NEPAL</option>
+                                              <option value="NETHERLANDS">NETHERLANDS</option>
+                                              <option value="NETHERLANDS ANTILLES">NETHERLANDS ANTILLES</option>
+                                              <option value="NEW CALEDONIA (FRENCH)">NEW CALEDONIA (FRENCH)</option>
+                                              <option value="NEW ZEALAND">NEW ZEALAND</option>
+                                              <option value="NICARAGUA">NICARAGUA</option>
+                                              <option value="NIGER">NIGER</option>
+                                              <option value="NIGERIA">NIGERIA</option>
+                                              <option value="NIUE">NIUE</option>
+                                              <option value="NORFOLK ISLAND">NORFOLK ISLAND</option>
+                                              <option value="NORTH KOREA">NORTH KOREA</option>
+                                              <option value="NORTHERN MARIANA ISLANDS">NORTHERN MARIANA ISLANDS</option>
+                                              <option value="NORWAY">NORWAY</option>
+                                              <option value="OMAN">OMAN</option>
+                                              <option value="PAKISTAN">PAKISTAN</option>
+                                              <option value="PALAU">PALAU</option>
+                                              <option value="PALESTINE">PALESTINE</option>
+                                              <option value="PANAMA">PANAMA</option>
+                                              <option value="PAPUA NEW GUINEA">PAPUA NEW GUINEA</option>
+                                              <option value="PARAGUAY">PARAGUAY</option>
+                                              <option value="PERU">PERU</option>
+                                              <option value="PHILIPPINES">PHILIPPINES</option>
+                                              <option value="PITCAIRN ISLAND">PITCAIRN ISLAND</option>
+                                              <option value="POLAND">POLAND</option>
+                                              <option value="POLYNESIA (FRENCH)">POLYNESIA (FRENCH)</option>
+                                              <option value="PORTUGAL">PORTUGAL</option>
+                                              <option value="PUERTO RICO">PUERTO RICO</option>
+                                              <option value="QATAR">QATAR</option>
+                                              <option value="REUNION (FRENCH)">REUNION (FRENCH)</option>
+                                              <option value="ROMANIA">ROMANIA</option>
+                                              <option value="RUSSIAN FEDERATION">RUSSIAN FEDERATION</option>
+                                              <option value="RWANDA">RWANDA</option>
+                                              <option value="S. SANDWICH ISLANDS">S. SANDWICH ISLANDS</option>
+                                              <option value="SAINT HELENA">SAINT HELENA</option>
+                                              <option value="SAINT KITTS">SAINT KITTS</option>
+                                              <option value="SAINT LUCIA">SAINT LUCIA</option>
+                                              <option value="SAINT PIERRE">SAINT PIERRE</option>
+                                              <option value="SAINT TOME">SAINT TOME</option>
+                                              <option value="SAINT VINCENT">SAINT VINCENT</option>
+                                              <option value="SAN MARINO">SAN MARINO</option>
+                                              <option value="SAUDI ARABIA">SAUDI ARABIA</option>
+                                              <option value="SENEGAL">SENEGAL</option>
+                                              <option value="SERBIA AND MONTENEGRO">SERBIA AND MONTENEGRO</option>
+                                              <option value="SEYCHELLES">SEYCHELLES</option>
+                                              <option value="SIERRA LEONE">SIERRA LEONE</option>
+                                              <option value="SINGAPORE">SINGAPORE</option>
+                                              <option value="SLOVAKIA">SLOVAKIA</option>
+                                              <option value="SLOVENIA">SLOVENIA</option>
+                                              <option value="SOLOMON ISLANDS">SOLOMON ISLANDS</option>
+                                              <option value="SOMALIA">SOMALIA</option>
+                                              <option value="SOUTH AFRICA">SOUTH AFRICA</option>
+                                              <option value="SOUTH KOREA">SOUTH KOREA</option>
+                                              <option value="SPAIN">SPAIN</option>
+                                              <option value="SRI LANKA">SRI LANKA</option>
+                                              <option value="SUDAN">SUDAN</option>
+                                              <option value="SURINAME">SURINAME</option>
+                                              <option value="SVALBARD ISLANDS">SVALBARD ISLANDS</option>
+                                              <option value="SWAZILAND">SWAZILAND</option>
+                                              <option value="SWEDEN">SWEDEN</option>
+                                              <option value="SWITZERLAND">SWITZERLAND</option>
+                                              <option value="SYRIA">SYRIA</option>
+                                              <option value="TADJIKISTAN">TADJIKISTAN</option>
+                                              <option value="TAIWAN">TAIWAN</option>
+                                              <option value="TANZANIA">TANZANIA</option>
+                                              <option value="THAILAND">THAILAND</option>
+                                              <option value="TOGO">TOGO</option>
+                                              <option value="TOKELAU">TOKELAU</option>
+                                              <option value="TONGA">TONGA</option>
+                                              <option value="TRINIDAD AND TOBAGO">TRINIDAD AND TOBAGO</option>
+                                              <option value="TUNISIA">TUNISIA</option>
+                                              <option value="TURKEY">TURKEY</option>
+                                              <option value="TURKMENISTAN">TURKMENISTAN</option>
+                                              <option value="TURKS AND CAICOS ISLANDS">TURKS AND CAICOS ISLANDS</option>
+                                              <option value="TUVALU">TUVALU</option>
+                                              <option value="UGANDA">UGANDA</option>
+                                              <option value="UK">UK</option>
+                                              <option value="UKRAINE">UKRAINE</option>
+                                              <option value="UNITED ARAB EMIRATES">UNITED ARAB EMIRATES</option>
+                                              <option value="UNITED CITYS">UNITED CITYS</option>
+                                              <option value="UNITED KINGDOM">UNITED KINGDOM</option>
+                                              <option value="URUGUAY">URUGUAY</option>
+                                              <option value="USA">USA</option>
+                                              <option value="USA MINOR ISLANDS">USA MINOR ISLANDS</option>
+                                              <option value="UZBEKISTAN">UZBEKISTAN</option>
+                                              <option value="VANUATU">VANUATU</option>
+                                              <option value="VATICAN CITY">VATICAN CITY</option>
+                                              <option value="VENEZUELA">VENEZUELA</option>
+                                              <option value="VIETNAM">VIETNAM</option>
+                                              <option value="VIRGIN ISLANDS (BRITISH)">VIRGIN ISLANDS (BRITISH)</option>
+                                              <option value="VIRGIN ISLANDS (USA)">VIRGIN ISLANDS (USA)</option>
+                                              <option value="WALLIS ISLANDS">WALLIS ISLANDS</option>
+                                              <option value="WESTERN SAHARA">WESTERN SAHARA</option>
+                                              <option value="YEMEN">YEMEN</option>
+                                              <option value="YUGOSLAVIA">YUGOSLAVIA</option>
+                                              <option value="ZAIRE">ZAIRE</option>
+                                              <option value="ZAMBIA">ZAMBIA</option>
+                                              <option value="ZIMBABWE">ZIMBABWE</option>
+                                            </select>
+                                            <font color="#000000"><span class="packers5">*</span></font> </font></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">Land- Line Number</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="Phone" type="text" size="25" class="packers" id="Phone" />
+                                              <span class="packers2"> with STD Codes* </span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">Mobile</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="Mobile" type="text" size="25" class="packers" id="Mobile" />
+                                              <span class="packers"> <br />
+                                              </span><span class="packers2">Please use 91 before your mobile 
+                                                Number.</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">E-mail</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><input name="email" type="text" id="email" size="25" />
+                                              <span class="packers5">*</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">Category</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2" valign="top"><label>
+                                            <select name="Category" class="packers" id="Category">
+                                              <option value="0">Please Select</option>
+                                              <option value="Dealer">Dealer</option>
+                                              <option value="OEM">OEM</option>
+                                              <option value="End User">End User</option>
+                                            </select>
+                                            </label>
+                                              <span class="packers5">*</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td height="40"><div align="right" class="packers">Description 
+                                            of the Requirement</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2"><label>
+                                            <textarea name="Description-of-the-Requirement" cols="30" id="Description-of-the-Requirement"></textarea>
+                                            </label>
+                                              <span class="packers2">(optional)</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><div align="right"><span class="packers">Comfortable Time 
+                                            for Contacting</span>&nbsp; </div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2" valign="top" class="packers4">Between
+                                            <select name="1" id="1">
+                                                <option value="1.00">1.00</option>
+                                                <option value="2.00">2.00</option>
+                                                <option value="3.00">3.00</option>
+                                                <option value="4.00">4.00</option>
+                                                <option value="5.00">5.00</option>
+                                                <option value="6.00">6.00</option>
+                                                <option value="7.00">7.00</option>
+                                                <option value="8.00">8.00</option>
+                                                <option value="9.00" selected="selected">9.00</option>
+                                                <option value="10.00">10.00</option>
+                                                <option value="11.00">11.00</option>
+                                                <option value="12.00">12.00</option>
+                                                <option value="13.00">13.00</option>
+                                                <option value="14.00">14.00</option>
+                                                <option value="15.00">15.00</option>
+                                                <option value="16.00">16.00</option>
+                                                <option value="17.00">17.00</option>
+                                                <option value="18.00">18.00</option>
+                                                <option value="19.00">19.00</option>
+                                                <option value="20.00">20.00</option>
+                                                <option value="21.00">21.00</option>
+                                                <option value="22.00">22.00</option>
+                                                <option value="23.00">23.00</option>
+                                                <option value="24.00">24.00</option>
+                                              </select>
+                                            to
+                                            <select name="2" id="2">
+                                              <option value="1.00">1.00</option>
+                                              <option value="2.00">2.00</option>
+                                              <option value="3.00">3.00</option>
+                                              <option value="4.00">4.00</option>
+                                              <option value="5.00">5.00</option>
+                                              <option value="6.00">6.00</option>
+                                              <option value="7.00">7.00</option>
+                                              <option value="8.00">8.00</option>
+                                              <option value="9.00">9.00</option>
+                                              <option value="10.00">10.00</option>
+                                              <option value="11.00">11.00</option>
+                                              <option value="12.00">12.00</option>
+                                              <option value="13.00">13.00</option>
+                                              <option value="14.00">14.00</option>
+                                              <option value="15.00">15.00</option>
+                                              <option value="16.00">16.00</option>
+                                              <option value="17.00" selected="selected">17.00</option>
+                                              <option value="18.00">18.00</option>
+                                              <option value="19.00">19.00</option>
+                                              <option value="20.00">20.00</option>
+                                              <option value="21.00">21.00</option>
+                                              <option value="22.00">22.00</option>
+                                              <option value="23.00">23.00</option>
+                                              <option value="24.00">24.00</option>
+                                            </select>
+                                            IST<br />
+                                            <span class="packers">eg.</span><span class="packers3"> (10 am to 5:30 pm)</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="packers"><div align="right">Where You Find Info About 
+                                            Us</div></td>
+                                          <td class="packers"><div align="center">:</div></td>
+                                          <td colspan="2" valign="top"><label>
+                                            <select name="Where-You-Find-Info-About-Us" class="packers" id="Where-You-Find-Info-About-Us">
+                                              <option value="">Please Select</option>
+                                              <option value="News Paper">News Paper</option>
+                                              <option value="Website">Website</option>
+                                              <option value="Magzine">Magzine</option>
+                                              <option value="Banner">Banner</option>
+                                              <option value="TV">TV</option>
+                                              <option value="Hording">Hording</option>
+                                            </select>
+                                            </label></td>
+                                        </tr>
+                                        <tr>
+                                          <td ><div align="right"></div></td>
+                                          <td><div align="center"></div></td>
+                                          <td width="217" align="left" valign="top"><div align="left">
+                                              <input type="submit" name="Submit" value="Submit" />
+                                              <input type="reset" name="Submit2" value="Reset" />
+                                          </div></td>
+                                          <td width="112" align="left" valign="top">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                          <td height="23" colspan="4">&nbsp;</td>
+                                        </tr>
+                                    </table></td>
+                                </tr>
+      </table>
+                          </form>
+</body>
+</html>
